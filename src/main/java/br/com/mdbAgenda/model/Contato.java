@@ -20,7 +20,7 @@ public class Contato {
     public static final String SEQUENCE_NAME = "contato_sequence";
 
     @Id
-    private long id;
+    private Long id;
     private String nome;
     private String fone;
 
