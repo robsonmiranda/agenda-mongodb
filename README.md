@@ -1,2 +1,2 @@
 # agenda-mongodb
-Aplicação REST usando: Spring, MongoDB, Java
+REST application using: Spring, MongoDB and Java
