@@ -1,2 +1,2 @@
 # agenda-mongodb
-REST application using: Spring, MongoDB and Java
+REST application using: Spring with SpringBoot, MongoDB and Java
