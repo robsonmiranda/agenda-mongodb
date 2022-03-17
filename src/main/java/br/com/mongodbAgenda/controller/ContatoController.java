@@ -1,4 +1,4 @@
-package br.com.mdbAgenda.controller;
+package br.com.mongodbAgenda.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.mdbAgenda.exception.ResourceNotFoundException;
-import br.com.mdbAgenda.model.Contato;
-import br.com.mdbAgenda.repository.ContatoRepository;
-import br.com.mdbAgenda.service.SequenceGeneratorService;
+import br.com.mongodbAgenda.exception.ResourceNotFoundException;
+import br.com.mongodbAgenda.model.Contato;
+import br.com.mongodbAgenda.repository.ContatoRepository;
+import br.com.mongodbAgenda.service.SequenceGeneratorService;
 
 @RestController
 @RequestMapping("/contatos")
@@ -53,10 +53,9 @@ public class ContatoController {
     }
 
     @PutMapping("/{id}")
-    public Contato updateContato(@PathVariable("id") Long id, @RequestBody Contato contatoDetails) 
-            throws ResourceNotFoundException {
-        Contato contato = contatoRepository.findById(id).orElseThrow(() 
-            -> new ResourceNotFoundException("Contato não encontrado para este id :: " + id));
+    public Contato updateContato(@PathVariable("id") Long id, @RequestBody Contato contatoDetails) throws ResourceNotFoundException {
+        Contato contato = contatoRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Contato não encontrado para este id :: " + id));
         contato.setNome(contatoDetails.getNome());
         contato.setFone(contatoDetails.getFone());
         final Contato updatedContato = contatoRepository.save(contato);
@@ -65,8 +64,8 @@ public class ContatoController {
 
     @DeleteMapping("/{id}")
     public Map<String, Boolean> deleteContato(@PathVariable("id") Long id) throws ResourceNotFoundException {
-        Contato contato = contatoRepository.findById(id).orElseThrow(() 
-            -> new ResourceNotFoundException("Contato não encontrado para este id :: " + id));
+        Contato contato = contatoRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Contato não encontrado para este id :: " + id));
         contatoRepository.delete(contato);
         Map<String, Boolean> response = new HashMap<String, Boolean>();
         response.put("deleted", Boolean.TRUE);

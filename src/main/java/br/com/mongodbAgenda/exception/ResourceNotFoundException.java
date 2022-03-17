@@ -1,4 +1,4 @@
-package br.com.mdbAgenda.exception;
+package br.com.mongodbAgenda.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

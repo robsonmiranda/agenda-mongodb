@@ -1,4 +1,4 @@
-package br.com.mdbAgenda.exception;
+package br.com.mongodbAgenda.exception;
 
 import java.util.Date;
 

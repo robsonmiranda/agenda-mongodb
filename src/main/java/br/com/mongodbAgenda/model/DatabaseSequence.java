@@ -1,4 +1,4 @@
-package br.com.mdbAgenda.model;
+package br.com.mongodbAgenda.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

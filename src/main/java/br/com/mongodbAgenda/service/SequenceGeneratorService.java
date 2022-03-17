@@ -1,4 +1,4 @@
-package br.com.mdbAgenda.service;
+package br.com.mongodbAgenda.service;
 
 import static org.springframework.data.mongodb.core.FindAndModifyOptions.options;
 import static org.springframework.data.mongodb.core.query.Criteria.where;
@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
-import br.com.mdbAgenda.model.DatabaseSequence;
+import br.com.mongodbAgenda.model.DatabaseSequence;
 
 @Service
 public class SequenceGeneratorService {

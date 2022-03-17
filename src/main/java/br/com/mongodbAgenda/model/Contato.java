@@ -1,4 +1,4 @@
-package br.com.mdbAgenda.model;
+package br.com.mongodbAgenda.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -31,6 +31,6 @@ public class Contato {
 
     public String toString() {
         return "Contato{" + "id=" + id + ", nome='" + nome + '\'' +
-        ", fone='" + fone + '\'' + '}';
+            ", fone='" + fone + '\'' + '}';
     }
 }
